@@ -8,9 +8,11 @@ Refer my document on "functional programming in scala"
 1. Use immutable data structures 
 2. Understand `collections` module from `python3`
 3. How to do transformation with `Map, Filter and Reduce` 
- 
+4. Understand `asyncio` module for reactive programming
+5. Learn `generators`, `yield` and `await`
+
 ## Cheat sheet
-1. Instead of `dictionary`, use `namedtuple`
+1. `namedtuple` : Instead of `dictionary`, use `namedtuple`
 2. `Filter` : Instead of creating a conditional for loop with `for():  if():` condition or
     Instead of creating list comprehension `[x for i in X if X.value = True]` 
     Go with `tuple(filter(func, <iterator object>))`
@@ -23,3 +25,5 @@ Refer my document on "functional programming in scala"
 6. `concurrent.futures` : This is similar to `multiprocessing` module. But, We can switch the 
     execution method between `ThreadPoolExecutor` and `ProcessPoolExecutor`. This has few other 
     advantages over other different methods of parallelism
+7. `asyncio` : This removes the overhead of having multiple thread / process. Asyncio provides event 
+    loop to track different I/O events. This helps in removing over head of context switches

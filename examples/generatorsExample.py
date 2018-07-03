@@ -1,3 +1,4 @@
+# Example 1 :
 def simple_gen():
     yield "Hello"
     yield "World"
@@ -11,3 +12,19 @@ Output :
 Hello
 World
 '''
+
+# Example 2 :
+def generate_nums():
+    num = 0
+    while True:
+        yield num
+        num = num + 1
+
+
+nums = generate_nums()
+
+for x in nums:
+    print(x)
+
+    if x > 9:
+        break

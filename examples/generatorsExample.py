@@ -1,5 +1,6 @@
 # Example 1 :
 def simple_gen():
+    # If there is yield statement, the function becomes generator
     yield "Hello"
     yield "World"
 

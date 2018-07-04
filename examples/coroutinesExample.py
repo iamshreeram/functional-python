@@ -1,4 +1,5 @@
 def coro():
+    # If yield stores any value to variable, it becomes coroutine
     hello = yield "Hello"
     yield hello
 

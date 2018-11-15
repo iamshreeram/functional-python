@@ -4,7 +4,7 @@
 This repo helps you in learning functional reactive python. This contains gist of every concepts and also their resources for reference.
 
 ## Why? 
-Refer my document on "functional programming in scala"
+Refer my document on [functional programming in scala](https://github.com/iamshreeram/scala-starter/blob/master/README.md#1-functional-reactive-programming)
 
 ## How to approach
 1. Use immutable data structures 

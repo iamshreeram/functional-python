@@ -14,7 +14,16 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 5. Learn `generators`, `yield` and `await`
 
 ## Cheat sheet
-1. `namedtuple` : Instead of `dictionary`, use `namedtuple`
+1. `namedtuple` : Instead of `tuples`, use `namedtuple`. Named tuples assign meaning to each position in a tuple and allow for more readable, self-documenting code. They can be used wherever regular tuples are used, and they add the ability to access fields by name instead of position index.
+
+    ```python3
+    from collections import namedtuple
+    Student = namedtuple('Student', 'fname last_name score')
+    s1 = Student('James', 'Mathew', '90')
+    print(s1.fname)
+    print(s1[0])
+    print(s1.score)
+    ```
 2. `Filter` : Instead of creating a conditional for loop with `for():  if():` condition or
     Instead of creating list comprehension `[x for i in X if X.value = True]` 
     Go with `tuple(filter(func, <iterator object>))`

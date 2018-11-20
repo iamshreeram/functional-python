@@ -6,7 +6,7 @@ This repo helps you in learning functional reactive python. This contains gist o
 ## Why? 
 Refer my document on [functional programming in scala](https://github.com/iamshreeram/scala-starter/blob/master/README.md#1-functional-reactive-programming)
 
-## How to approach
+## How to approach?
 1. Use immutable data structures 
 2. Understand `collections` module from `python3`
 3. How to do transformation with `Map, Filter and Reduce` 
@@ -24,12 +24,24 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
     print(s1[0])
     print(s1.score)
     ```
-2. `Filter` : Instead of creating a conditional for loop with `for():  if():` condition or
+2. `Map` :  Map helps in applying any function / list of functions to entire list 
+
+	```python3
+	from math import sin, cos, tan, pi
+	def map_functions(x, functions):
+		 return [ func(x) for func in functions ]
+		 
+	family_of_functions = (sin, cos, tan)
+	print(map_functions(pi, family_of_functions))
+
+	```
+
+
+3. `Reduce` : This is inside `functools`. This reduces the sequence of values to single value.
+4. `Filter` : Instead of creating a conditional for loop with `for():  if():` condition or
     Instead of creating list comprehension `[x for i in X if X.value = True]` 
     Go with `tuple(filter(func, <iterator object>))`
-3. `Map` :  This is similar to `filter`. Only difference is, Instead conditional for loop, 
-    map helps in applying any function to entire list 
-4. `Reduce` : This is inside `functools`. This reduces the sequence of values to single value.
+
 5. `multiprocessing` : To utilize multiple cores of CPU. This module create a `pool` and 
     run `map` or `filter` or any operation from pools. This has multiple options to define the 
     the pool size and number of CPU to be used

@@ -24,6 +24,7 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
     print(s1[0])
     print(s1.score)
     ```
+	
 2. `Map` :  Map helps in applying any function / list of functions to entire list 
 
 	```python3
@@ -36,8 +37,12 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 
 	```
 
+3. `Reduce` : This is inside `functools`. This reduces the sequence of values to single value. Helps in aggregation of the list.
+	```
+	from functools import reduce
+	reduce(lambda x, y: x+y, range(1,101))
+	```
 
-3. `Reduce` : This is inside `functools`. This reduces the sequence of values to single value.
 4. `Filter` : Instead of creating a conditional for loop with `for():  if():` condition or
     Instead of creating list comprehension `[x for i in X if X.value = True]` 
     Go with `tuple(filter(func, <iterator object>))`

@@ -38,7 +38,7 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 	```
 
 3. `Reduce` : This is inside `functools`. This reduces the sequence of values to single value. Helps in aggregation of the list.
-	```
+	```python3
 	from functools import reduce
 	reduce(lambda x, y: x+y, range(1,101))
 	```
@@ -46,10 +46,10 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 4. `Filter` : Instead of creating a conditional for loop with `for():` & `if():` condition or Instead of creating list comprehension `[x for i in X if X.value = True]` 
     Go with `tuple(filter(func, <iterator object>))`
 	```python3
-		even_numbers = list(filter(lambda x: x % 2 == 0, fibonacci))
-		print(even_numbers)
-		
-		# [0, 2, 8, 34]
+	even_numbers = list(filter(lambda x: x % 2 == 0, fibonacci))
+	print(even_numbers)
+	
+	# [0, 2, 8, 34]
 	```
 
 5. `multiprocessing` : To utilize multiple cores of CPU. This module create a `pool` and 

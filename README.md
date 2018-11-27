@@ -14,6 +14,8 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 5. Learn `generators`, `yield` and `await`
 
 ## Cheat sheet
+
+### What to use?
 1. `namedtuple` : Instead of `tuples`, use `namedtuple`. Named tuples assign meaning to each position in a tuple and allow for more readable, self-documenting code. They can be used wherever regular tuples are used, and they add the ability to access fields by name instead of position index.
 
     ```python3
@@ -38,6 +40,7 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 	```
 
 3. `Reduce` : This is inside `functools`. This reduces the sequence of values to single value. Helps in aggregation of the list.
+
 	```python3
 	from functools import reduce
 	reduce(lambda x, y: x+y, range(1,101))
@@ -51,12 +54,35 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 	
 	# [0, 2, 8, 34]
 	```
-
+	
 5. `multiprocessing` : To utilize multiple cores of CPU. This module create a `pool` and 
     run `map` or `filter` or any operation from pools. This has multiple options to define the 
     the pool size and number of CPU to be used
+	
 6. `concurrent.futures` : This is similar to `multiprocessing` module. But, We can switch the 
     execution method between `ThreadPoolExecutor` and `ProcessPoolExecutor`. This has few other 
     advantages over other different methods of parallelism
 7. `asyncio` : This removes the overhead of having multiple thread / process. Asyncio provides event 
     loop to track different I/O events. This helps in removing over head of context switches
+	
+
+### What not to?
+
+1. Do not using `<list>.reverse()` module. Use `<list>[::-1]` for reversing the list instead of using `reverse()` method, as `[::-1]` returns the new list instead of mutating the existing one.
+	```python3
+		def g(x):
+			''' Dont use below as it mutates the existing list 
+					# x.reverse()
+					# return x
+			'''
+			return x[::-1]
+
+		def f(x):
+			return x + [99]
+
+		x = [1,2,3]
+		y = g(x)
+		print(y)
+		print(f(x))
+	
+	```

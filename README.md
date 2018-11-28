@@ -70,19 +70,19 @@ Refer my document on [functional programming in scala](https://github.com/iamshr
 
 1. Do not using `<list>.reverse()` module. Use `<list>[::-1]` for reversing the list instead of using `reverse()` method, as `[::-1]` returns the new list instead of mutating the existing one.
 	```python3
-		def g(x):
-			''' Dont use below as it mutates the existing list 
-					# x.reverse()
-					# return x
-			'''
-			return x[::-1]
+	def g(x):
+		''' Dont use below as it mutates the existing list 
+		# x.reverse()
+		# return x
+		'''
+		return x[::-1]
 
-		def f(x):
-			return x + [99]
+	def f(x):
+		return x + [99]
 
-		x = [1,2,3]
-		y = g(x)
-		print(y)
-		print(f(x))
+	x = [1,2,3]
+	y = g(x)
+	print(y)
+	print(f(x))
 	
 	```
